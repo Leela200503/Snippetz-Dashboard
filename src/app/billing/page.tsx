@@ -19,11 +19,13 @@ export default function BillingPage() {
   const handleUpgrade = async () => {
     setLoading(true);
     try {
-      // You must create a product in Stripe test mode and place its price_XXXX id here.
-      // E.g., const priceId = "price_1P..."
-      // Let's assume the user will put their price ID in the prompt, or we'll ask them to configure it.
-      // We will fall back to an env var or a placeholder for now.
-      const priceId = process.env.NEXT_PUBLIC_STRIPE_PRICE_ID || "price_dummy"; 
+      const priceId = process.env.NEXT_PUBLIC_STRIPE_PRICE_ID; 
+      
+      if (!priceId) {
+        alert("Stripe price ID is missing from environment variables.");
+        setLoading(false);
+        return;
+      }
       
       const res = await fetch("/api/stripe/checkout", {
         method: "POST",

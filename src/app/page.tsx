@@ -39,10 +39,10 @@ export default async function Home() {
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 text-center">
         <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 mb-6 max-w-2xl">
-          Your Personal <span className="text-indigo-600">AI Prompt</span> & Snippet Library
+          The cleanest way to organize your <span className="text-indigo-600">prompts and snippets</span>
         </h1>
         <p className="text-xl text-gray-600 mb-10 max-w-xl">
-          Save, tag, and instantly retrieve your most used text snippets and ChatGPT prompts. Stop losing your best work.
+          Stop losing your best work in random notes apps. Save, tag, and copy your most used snippets in one click.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-20">
@@ -50,7 +50,7 @@ export default async function Home() {
             href="/login"
             className="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 shadow-lg"
           >
-            Start for free
+            Start building your library
           </Link>
         </div>
 
